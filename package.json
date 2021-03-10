@@ -1,16 +1,17 @@
 {
     "name": "genese-mapper",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "author": {
         "name": "Gilles Fabre",
         "url": "https://github.com/gillesfabre34"
     },
     "scripts": {
+        "build": "tsc",
         "debug": "ts-node src/debug/start.ts",
+        "republish_package": "npm unpublish -f && npm run build && npm publish",
         "test": "karma start karma.conf.js"
     },
-    "dependencies": {
-    },
+    "dependencies": {},
     "devDependencies": {
         "@types/jasmine": "~2.8.8",
         "@types/jasminewd2": "~2.0.3",
